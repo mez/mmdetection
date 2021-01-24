@@ -28,6 +28,9 @@ mmlvis = "^10.5.3"
 imagecorruptions = "^1.1.2"
 cityscapesScripts = "^2.2.0"
 albumentations = "^0.5.2"
+mmcv-full = "^1.2.6"
+torchvision = "^0.8.2"
+torch = "^1.7.1"
 
 [tool.poetry.dev-dependencies]
 
