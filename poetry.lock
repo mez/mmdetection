@@ -15,12 +15,12 @@ optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
-imgaug = ">=0.4.0"
-numpy = ">=1.11.1"
-opencv-python-headless = ">=4.1.1"
 PyYAML = "*"
+imgaug = ">=0.4.0"
+opencv-python-headless = ">=4.1.1"
 scikit-image = ">=0.16.1"
 scipy = "*"
+numpy = ">=1.11.1"
 
 [package.extras]
 tests = ["pytest"]
@@ -58,10 +58,10 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [package.extras]
-dev = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "zope.interface", "furo", "sphinx", "pre-commit"]
 docs = ["furo", "sphinx", "zope.interface"]
 tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "zope.interface"]
 tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six"]
+dev = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "six", "zope.interface", "furo", "sphinx", "pre-commit"]
 
 [[package]]
 name = "certifi"
@@ -88,14 +88,14 @@ optional = false
 python-versions = "*"
 
 [package.dependencies]
-appdirs = "*"
+tqdm = "*"
 coloredlogs = "*"
 matplotlib = "*"
+pyquaternion = "*"
+typing = "*"
 numpy = "*"
 pillow = "*"
-pyquaternion = "*"
-tqdm = "*"
-typing = "*"
+appdirs = "*"
 
 [package.extras]
 gui = ["pyqt5"]
@@ -117,8 +117,8 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [package.dependencies]
-coverage = "*"
 requests = ">=2.7.9"
+coverage = "*"
 
 [[package]]
 name = "colorama"
@@ -173,14 +173,6 @@ optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
-name = "dataclasses"
-version = "0.8"
-description = "A backport of the dataclasses module for Python 3.6"
-category = "main"
-optional = false
-python-versions = ">=3.6, <3.7"
-
-[[package]]
 name = "decorator"
 version = "4.4.2"
 description = "Decorators for Humans"
@@ -201,6 +193,14 @@ importlib-metadata = {version = "*", markers = "python_version < \"3.8\""}
 mccabe = ">=0.6.0,<0.7.0"
 pycodestyle = ">=2.6.0a1,<2.7.0"
 pyflakes = ">=2.2.0,<2.3.0"
+
+[[package]]
+name = "future"
+version = "0.18.2"
+description = "Clean single-source support for Python 3 and 2"
+category = "main"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "humanfriendly"
@@ -230,11 +230,11 @@ optional = false
 python-versions = "*"
 
 [package.dependencies]
-numpy = ">=1.16"
+scipy = ">=1.2.1"
 opencv-python = ">=3.4.5"
+numpy = ">=1.16"
 Pillow = ">=5.4.1"
 scikit-image = ">=0.15"
-scipy = ">=1.2.1"
 
 [[package]]
 name = "imageio"
@@ -249,9 +249,9 @@ numpy = "*"
 pillow = "*"
 
 [package.extras]
-ffmpeg = ["imageio-ffmpeg"]
 fits = ["astropy"]
 full = ["astropy", "gdal", "imageio-ffmpeg", "itk"]
+ffmpeg = ["imageio-ffmpeg"]
 gdal = ["gdal"]
 itk = ["itk"]
 
@@ -265,14 +265,14 @@ python-versions = "*"
 
 [package.dependencies]
 imageio = "*"
-matplotlib = "*"
-numpy = ">=1.15"
-opencv-python = "*"
-Pillow = "*"
-scikit-image = ">=0.14.2"
-scipy = "*"
 Shapely = "*"
 six = "*"
+scikit-image = ">=0.14.2"
+matplotlib = "*"
+scipy = "*"
+opencv-python = "*"
+numpy = ">=1.15"
+Pillow = "*"
 
 [[package]]
 name = "importlib-metadata"
@@ -322,17 +322,17 @@ optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
-attrs = "*"
-click = "*"
-colorama = "*"
 py = "*"
-tabulate = "*"
 toml = "*"
+attrs = "*"
+colorama = "*"
+click = "*"
+tabulate = "*"
 
 [package.extras]
-dev = ["sphinx", "sphinx-autobuild", "pytest", "pytest-cov", "pytest-mock", "wheel", "pre-commit"]
 docs = ["sphinx", "sphinx-autobuild"]
 tests = ["pytest", "pytest-cov", "pytest-mock"]
+dev = ["sphinx", "sphinx-autobuild", "pytest", "pytest-cov", "pytest-mock", "wheel", "pre-commit"]
 
 [[package]]
 name = "isort"
@@ -343,8 +343,8 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [package.extras]
-pipfile = ["pipreqs", "requirementslib"]
 pyproject = ["toml"]
+pipfile = ["pipreqs", "requirementslib"]
 requirements = ["pipreqs", "pip-api"]
 xdg_home = ["appdirs (>=1.4.0)"]
 
@@ -415,8 +415,8 @@ optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
-importlib-resources = {version = "*", markers = "python_version < \"3.7\""}
 "jaraco.functools" = "*"
+importlib-resources = {version = "*", markers = "python_version < \"3.7\""}
 
 [package.extras]
 docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
@@ -447,13 +447,13 @@ optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
-"jaraco.collections" = "*"
-"jaraco.structures" = ">=1.1.1"
-"jaraco.text" = "*"
-"jaraco.ui" = "*"
 more-itertools = "*"
-path = "*"
+"jaraco.text" = "*"
+"jaraco.structures" = ">=1.1.1"
 six = "*"
+"jaraco.collections" = "*"
+path = "*"
+"jaraco.ui" = "*"
 
 [package.extras]
 docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
@@ -484,8 +484,8 @@ optional = false
 python-versions = "*"
 
 [package.dependencies]
-numpy = "*"
 scipy = "*"
+numpy = "*"
 six = "*"
 ubelt = "*"
 
@@ -503,12 +503,12 @@ optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
+pillow = ">=6.2.0"
+python-dateutil = ">=2.1"
+pyparsing = ">=2.0.3,<2.0.4 || >2.0.4,<2.1.2 || >2.1.2,<2.1.6 || >2.1.6"
+numpy = ">=1.15"
 cycler = ">=0.10"
 kiwisolver = ">=1.0.1"
-numpy = ">=1.15"
-pillow = ">=6.2.0"
-pyparsing = ">=2.0.3,<2.0.4 || >2.0.4,<2.1.2 || >2.1.2,<2.1.6 || >2.1.6"
-python-dateutil = ">=2.1"
 
 [[package]]
 name = "mccabe"
@@ -527,13 +527,13 @@ optional = false
 python-versions = "*"
 
 [package.dependencies]
-addict = "*"
-numpy = "*"
-opencv-python = ">=3"
-Pillow = "*"
-pyyaml = "*"
 regex = {version = "*", markers = "sys_platform == \"win32\""}
+pyyaml = "*"
 yapf = "*"
+addict = "*"
+opencv-python = ">=3"
+numpy = "*"
+Pillow = "*"
 
 [[package]]
 name = "mmlvis"
@@ -544,15 +544,15 @@ optional = false
 python-versions = "*"
 
 [package.dependencies]
-cycler = ">=0.10.0"
 Cython = ">=0.29.12"
-kiwisolver = ">=1.1.0"
-matplotlib = ">=3.1.1"
-numpy = ">=1.18.2"
-opencv-python = ">=4.1.0.25"
-pyparsing = ">=2.4.0"
-python-dateutil = ">=2.8.0"
 six = ">=1.12.0"
+matplotlib = ">=3.1.1"
+python-dateutil = ">=2.8.0"
+cycler = ">=0.10.0"
+opencv-python = ">=4.1.0.25"
+numpy = ">=1.18.2"
+pyparsing = ">=2.4.0"
+kiwisolver = ">=1.1.0"
 
 [[package]]
 name = "mmpycocotools"
@@ -587,16 +587,16 @@ decorator = ">=4.3.0"
 
 [package.extras]
 all = ["numpy", "scipy", "pandas", "matplotlib", "pygraphviz", "pydot", "pyyaml", "lxml", "pytest"]
-gdal = ["gdal"]
 lxml = ["lxml"]
-matplotlib = ["matplotlib"]
-numpy = ["numpy"]
-pandas = ["pandas"]
 pydot = ["pydot"]
-pygraphviz = ["pygraphviz"]
-pytest = ["pytest"]
+numpy = ["numpy"]
 pyyaml = ["pyyaml"]
+matplotlib = ["matplotlib"]
 scipy = ["scipy"]
+pytest = ["pytest"]
+pygraphviz = ["pygraphviz"]
+pandas = ["pandas"]
+gdal = ["gdal"]
 
 [[package]]
 name = "numpy"
@@ -719,8 +719,8 @@ python-versions = "*"
 numpy = "*"
 
 [package.extras]
-dev = ["mkdocs"]
 test = ["nose"]
+dev = ["mkdocs"]
 
 [[package]]
 name = "pyreadline"
@@ -739,15 +739,15 @@ optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
-atomicwrites = {version = ">=1.0", markers = "sys_platform == \"win32\""}
-attrs = ">=19.2.0"
-colorama = {version = "*", markers = "sys_platform == \"win32\""}
-importlib-metadata = {version = ">=0.12", markers = "python_version < \"3.8\""}
-iniconfig = "*"
 packaging = "*"
-pluggy = ">=0.12,<1.0.0a1"
 py = ">=1.8.2"
+iniconfig = "*"
+importlib-metadata = {version = ">=0.12", markers = "python_version < \"3.8\""}
+colorama = {version = "*", markers = "sys_platform == \"win32\""}
+attrs = ">=19.2.0"
 toml = "*"
+pluggy = ">=0.12,<1.0.0a1"
+atomicwrites = {version = ">=1.0", markers = "sys_platform == \"win32\""}
 
 [package.extras]
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xmlschema"]
@@ -799,9 +799,9 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [package.dependencies]
+idna = ">=2.5,<3"
 certifi = ">=2017.4.17"
 chardet = ">=3.0.2,<5"
-idna = ">=2.5,<3"
 urllib3 = ">=1.21.1,<1.27"
 
 [package.extras]
@@ -818,18 +818,18 @@ python-versions = ">=3.6"
 
 [package.dependencies]
 imageio = ">=2.3.0"
+PyWavelets = ">=1.1.1"
 matplotlib = ">=2.0.0,<3.0.0 || >3.0.0"
+scipy = ">=1.0.1"
 networkx = ">=2.0"
+tifffile = ">=2019.7.26"
 numpy = ">=1.15.1"
 pillow = ">=4.3.0,<7.1.0 || >7.1.0,<7.1.1 || >7.1.1"
-PyWavelets = ">=1.1.1"
-scipy = ">=1.0.1"
-tifffile = ">=2019.7.26"
 
 [package.extras]
+test = ["pytest (!=3.7.3)", "pytest-cov", "pytest-localserver", "flake8", "codecov"]
 docs = ["sphinx (>=1.8,<=2.4.4)", "numpydoc (>=0.9)", "sphinx-gallery (>=0.3.1)", "sphinx-copybutton", "pytest-runner", "scikit-learn", "matplotlib (>=3.0.1)", "dask[array] (>=0.15.0)", "cloudpickle (>=0.2.1)", "pandas (>=0.23.0)", "seaborn (>=0.7.1)", "pooch (>=0.5.2)"]
 optional = ["simpleitk", "astropy (>=1.2.0)", "qtpy", "pyamg", "dask[array] (>=0.15.0)", "cloudpickle (>=0.2.1)", "pooch (>=0.5.2)"]
-test = ["pytest (!=3.7.3)", "pytest-cov", "pytest-localserver", "flake8", "codecov"]
 
 [[package]]
 name = "scikit-learn"
@@ -841,15 +841,15 @@ python-versions = ">=3.6"
 
 [package.dependencies]
 joblib = ">=0.11"
-numpy = ">=1.13.3"
-scipy = ">=0.19.1"
 threadpoolctl = ">=2.0.0"
+scipy = ">=0.19.1"
+numpy = ">=1.13.3"
 
 [package.extras]
-benchmark = ["matplotlib (>=2.1.1)", "pandas (>=0.25.0)", "memory-profiler (>=0.57.0)"]
 docs = ["matplotlib (>=2.1.1)", "scikit-image (>=0.13)", "pandas (>=0.25.0)", "seaborn (>=0.9.0)", "memory-profiler (>=0.57.0)", "sphinx (>=3.2.0)", "sphinx-gallery (>=0.7.0)", "numpydoc (>=1.0.0)", "Pillow (>=7.1.2)", "sphinx-prompt (>=1.3.0)"]
-examples = ["matplotlib (>=2.1.1)", "scikit-image (>=0.13)", "pandas (>=0.25.0)", "seaborn (>=0.9.0)"]
 tests = ["matplotlib (>=2.1.1)", "scikit-image (>=0.13)", "pandas (>=0.25.0)", "pytest (>=5.0.1)", "pytest-cov (>=2.9.0)", "flake8 (>=3.8.2)", "mypy (>=0.770)", "pyamg (>=4.0.0)"]
+benchmark = ["matplotlib (>=2.1.1)", "pandas (>=0.25.0)", "memory-profiler (>=0.57.0)"]
+examples = ["matplotlib (>=2.1.1)", "scikit-image (>=0.13)", "pandas (>=0.25.0)", "seaborn (>=0.9.0)"]
 
 [[package]]
 name = "scipy"
@@ -871,9 +871,9 @@ optional = false
 python-versions = "*"
 
 [package.extras]
-all = ["numpy", "pytest", "pytest-cov"]
 test = ["pytest", "pytest-cov"]
 vectorized = ["numpy"]
+all = ["numpy", "pytest", "pytest-cov"]
 
 [[package]]
 name = "six"
@@ -945,29 +945,31 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "torch"
-version = "1.7.1"
+version = "1.6.0"
 description = "Tensors and Dynamic neural networks in Python with strong GPU acceleration"
 category = "main"
 optional = false
-python-versions = ">=3.6.2"
+python-versions = ">=3.6.1"
 
 [package.dependencies]
-dataclasses = {version = "*", markers = "python_version < \"3.7\""}
+future = "*"
 numpy = "*"
-typing-extensions = "*"
 
+[package.source]
+type = "url"
+url = "https://download.pytorch.org/whl/cu102/torch-1.6.0-cp36-cp36m-linux_x86_64.whl"
 [[package]]
 name = "torchvision"
-version = "0.8.2"
+version = "0.7.0"
 description = "image and video datasets and models for torch deep learning"
 category = "main"
 optional = false
 python-versions = "*"
 
 [package.dependencies]
+torch = "1.6.0"
 numpy = "*"
 pillow = ">=4.1.1"
-torch = "1.7.1"
 
 [package.extras]
 scipy = ["scipy"]
@@ -981,8 +983,8 @@ optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
 
 [package.extras]
-dev = ["py-make (>=0.1.0)", "twine", "wheel"]
 telegram = ["requests"]
+dev = ["py-make (>=0.1.0)", "twine", "wheel"]
 
 [[package]]
 name = "typing"
@@ -1010,8 +1012,8 @@ python-versions = "*"
 
 [package.dependencies]
 "jaraco.windows" = {version = "*", markers = "platform_system == \"Windows\""}
-ordered-set = "*"
 six = "*"
+ordered-set = "*"
 
 [package.extras]
 all = ["six", "ordered-set", "numpy", "xxhash", "pygments", "xdoctest", "pytest", "pytest-cov", "pytest-timeout", "coverage", "codecov", "jaraco.windows", "colorama", "typing"]
@@ -1043,10 +1045,10 @@ python-versions = "*"
 six = "*"
 
 [package.extras]
-all = ["six", "pytest", "pytest-cov", "codecov", "scikit-build", "cmake", "ninja", "pybind11", "pygments", "colorama", "nbformat", "nbconvert", "jupyter-client", "ipython", "ipykernel"]
-colors = ["pygments", "colorama"]
 jupyter = ["nbformat", "nbconvert", "jupyter-client", "ipython", "ipykernel"]
+all = ["six", "pytest", "pytest-cov", "codecov", "scikit-build", "cmake", "ninja", "pybind11", "pygments", "colorama", "nbformat", "nbconvert", "jupyter-client", "ipython", "ipykernel"]
 optional = ["pygments", "colorama", "nbformat", "nbconvert", "jupyter-client", "ipython", "ipykernel"]
+colors = ["pygments", "colorama"]
 tests = ["pytest", "pytest-cov", "codecov", "scikit-build", "cmake", "ninja", "pybind11", "nbformat", "nbconvert", "jupyter-client", "ipython", "ipykernel"]
 
 [[package]]
@@ -1072,7 +1074,7 @@ testing = ["pytest (>=3.5,!=3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake
 [metadata]
 lock-version = "1.1"
 python-versions = "3.6.9"
-content-hash = "dd3697fa84d1a766589be70f30ec02388789417c7e592360571919723c9e9937"
+content-hash = "0c0e2ceed6b0d8855c933558fbbe9623289acbeaa118cde4294572e7903e3388"
 
 [metadata.files]
 addict = [
@@ -1221,10 +1223,6 @@ cython = [
     {file = "Cython-0.29.21-py2.py3-none-any.whl", hash = "sha256:5c4276fdcbccdf1e3c1756c7aeb8395e9a36874fa4d30860e7694f43d325ae13"},
     {file = "Cython-0.29.21.tar.gz", hash = "sha256:e57acb89bd55943c8d8bf813763d20b9099cc7165c0f16b707631a7654be9cad"},
 ]
-dataclasses = [
-    {file = "dataclasses-0.8-py3-none-any.whl", hash = "sha256:0201d89fa866f68c8ebd9d08ee6ff50c0b255f8ec63a71c16fda7af82bb887bf"},
-    {file = "dataclasses-0.8.tar.gz", hash = "sha256:8479067f342acf957dc82ec415d355ab5edb7e7646b90dc6e2fd1d96ad084c97"},
-]
 decorator = [
     {file = "decorator-4.4.2-py2.py3-none-any.whl", hash = "sha256:41fa54c2a0cc4ba648be4fd43cff00aedf5b9465c9bf18d64325bc225f08f760"},
     {file = "decorator-4.4.2.tar.gz", hash = "sha256:e3a62f0520172440ca0dcc823749319382e377f37f140a0b99ef45fecb84bfe7"},
@@ -1232,6 +1230,9 @@ decorator = [
 flake8 = [
     {file = "flake8-3.8.4-py2.py3-none-any.whl", hash = "sha256:749dbbd6bfd0cf1318af27bf97a14e28e5ff548ef8e5b1566ccfb25a11e7c839"},
     {file = "flake8-3.8.4.tar.gz", hash = "sha256:aadae8761ec651813c24be05c6f7b4680857ef6afaae4651a4eccaef97ce6c3b"},
+]
+future = [
+    {file = "future-0.18.2.tar.gz", hash = "sha256:b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"},
 ]
 humanfriendly = [
     {file = "humanfriendly-9.1-py2.py3-none-any.whl", hash = "sha256:d5c731705114b9ad673754f3317d9fa4c23212f36b29bdc4272a892eafc9bc72"},
@@ -1771,29 +1772,14 @@ toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
 ]
-torch = [
-    {file = "torch-1.7.1-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:422e64e98d0e100c360993819d0307e5d56e9517b26135808ad68984d577d75a"},
-    {file = "torch-1.7.1-cp36-cp36m-win_amd64.whl", hash = "sha256:f0aaf657145533824b15f2fd8fde8f8c67fe6c6281088ef588091f03fad90243"},
-    {file = "torch-1.7.1-cp36-none-macosx_10_9_x86_64.whl", hash = "sha256:af464a6f4314a875035e0c4c2b07517599704b214634f4ed3ad2e748c5ef291f"},
-    {file = "torch-1.7.1-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:5d76c255a41484c1d41a9ff570b9c9f36cb85df9428aa15a58ae16ac7cfc2ea6"},
-    {file = "torch-1.7.1-cp37-cp37m-win_amd64.whl", hash = "sha256:d241c3f1c4d563e4ba86f84769c23e12606db167ee6f674eedff6d02901462e3"},
-    {file = "torch-1.7.1-cp37-none-macosx_10_9_x86_64.whl", hash = "sha256:de84b4166e3f7335eb868b51d3bbd909ec33828af27290b4171bce832a55be3c"},
-    {file = "torch-1.7.1-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:dd2fc6880c95e836960d86efbbc7f63d3287f2e1893c51d31f96dbfe02f0d73e"},
-    {file = "torch-1.7.1-cp38-cp38-win_amd64.whl", hash = "sha256:e000b94be3aa58ad7f61e7d07cf379ea9366cf6c6874e68bd58ad0bdc537b3a7"},
-    {file = "torch-1.7.1-cp38-none-macosx_10_9_x86_64.whl", hash = "sha256:2e49cac969976be63117004ee00d0a3e3dd4ea662ad77383f671b8992825de1a"},
-    {file = "torch-1.7.1-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:a3793dcceb12b1e2281290cca1277c5ce86ddfd5bf044f654285a4d69057aea7"},
-    {file = "torch-1.7.1-cp39-cp39-win_amd64.whl", hash = "sha256:6652a767a0572ae0feb74ad128758e507afd3b8396b6e7f147e438ba8d4c6f63"},
-    {file = "torch-1.7.1-cp39-none-macosx_10_9_x86_64.whl", hash = "sha256:38d67f4fb189a92a977b2c0a38e4f6dd413e0bf55aa6d40004696df7e40a71ff"},
-]
+torch = []
 torchvision = [
-    {file = "torchvision-0.8.2-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:86fae370d222f76ad57c57c3bee03f78b8db727743bfb4c1559a3d395159cea8"},
-    {file = "torchvision-0.8.2-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:951239b5fcb911dbf78c1385d677f5f48c7a1b12859e3d3ec287562821b17cf2"},
-    {file = "torchvision-0.8.2-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:24db8f4c3d812a032273f68563ad5dbd724f5bfbed523d0c6dce8cede26bb153"},
-    {file = "torchvision-0.8.2-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:b068f6bcbe91bdd34dda0a39e8a26392add45a3be82543f6dd523b76484fb56f"},
-    {file = "torchvision-0.8.2-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:afb76a66b9b0693f758a881a2bf333ed97e3c0c3f15a413c4f49d8dd8bd21307"},
-    {file = "torchvision-0.8.2-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:cd8817e9197fc60ebae37162a445db90bbf35591314a5767ad3d1490b5d65b0f"},
-    {file = "torchvision-0.8.2-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:1bd58acc3366ec02266aae56a7a752d43ef07de4a6ba420c4f907d0c9168bb8c"},
-    {file = "torchvision-0.8.2-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:976750a49db2e23dc5a1ed0b5c31f7af51ed2702eee410ee09ef985c3a3e48cf"},
+    {file = "torchvision-0.7.0-cp36-cp36m-macosx_10_9_x86_64.whl", hash = "sha256:a70d80bb8749c1e4a46fa56dc2fc857e98d14600841e02cc2fed766daf96c245"},
+    {file = "torchvision-0.7.0-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:14c0bf60fa26aabaea64ef30b8e5d441ee78d1a5eed568c30806af19bbe6b638"},
+    {file = "torchvision-0.7.0-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:8c8df7e1d1f3d4e088256be1e8c8d3eb90b016302baa4649742d47ae1531da37"},
+    {file = "torchvision-0.7.0-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:0d1a5adfef4387659c7a0af3b72e16caa0c67224a422050ab65184d13ac9fb13"},
+    {file = "torchvision-0.7.0-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:f5686e0a0dd511ac33eb9d6279bd34edd9f282dcb7c8ad21e290882c6206504f"},
+    {file = "torchvision-0.7.0-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:cfa2b367bc9acf20f18b151d0525970279719e81969c17214effe77245875354"},
 ]
 tqdm = [
     {file = "tqdm-4.56.0-py2.py3-none-any.whl", hash = "sha256:4621f6823bab46a9cc33d48105753ccbea671b68bab2c50a9f0be23d4065cb5a"},
