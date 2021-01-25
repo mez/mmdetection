@@ -8,7 +8,6 @@ model = dict(
     backbone=dict(
         type='ResNet',
         depth=50,
-        groups=64,
         num_stages=4,
         out_indices=(0, 1, 2, 3),
         frozen_stages=1,
