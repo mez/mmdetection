@@ -21,24 +21,39 @@ model = dict(
                 stages=(False, True, True, True),
                 position='after_conv3')
         ],
-        style='pytorch'),
+        style='pytorch'
+    ),
 
-     bbox_head=dict(
+    neck=[
+        dict(
+            type='FPN',
+            in_channels=[256, 512, 1024, 2048],
+            out_channels=256,
+            num_outs=5),
+        dict(
+            type='BFP',
+            in_channels=256,
+            num_levels=5,
+            refine_level=2,
+            refine_type='non_local')
+    ],
+    
+    bbox_head=dict(
         loss_bbox=dict(
             _delete_=True,
             type='BalancedL1Loss',
             alpha=0.5,
             gamma=1.5,
             beta=0.11,
-            loss_weight=1.0)))
-
+            loss_weight=1.0)
+    )
 )
 
 
 ##################### TRAIN CONFIG ######################
 
-    train_cfg=dict(
-        rcnn=dict(
+train_cfg=dict(
+    rcnn=dict(
             sampler=dict(
                 _delete_=True,
                 type='CombinedSampler',
@@ -50,4 +65,7 @@ model = dict(
                     type='IoUBalancedNegSampler',
                     floor_thr=-1,
                     floor_fraction=0,
-                    num_bins=3)))))
+                    num_bins=3)
+            )
+        )
+)
