@@ -121,3 +121,4 @@ work_dirs/
 *.sh~
 
 datasets/*
+work_dir/*
