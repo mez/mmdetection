@@ -1,4 +1,4 @@
-_base_ = '../cascade_rcnn/cascade_rcnn_x101_32x4d_fpn_1x_coco.py'
+_base_ = 'cascade_rcnn_x101_32x4d_fpn_dconv_c3-c5_1x_coco.py'
 model = dict(
     neck=[
         dict(
