@@ -1,5 +1,5 @@
 _base_ = 'libra_cascade_rcnn_x101_32x4d_fpn_dconv_c3-c5_1x_coco.py'
-data_root = '/home/siddheshmhatre/opensource/mmdetection/data/bdd100kcoco/'
+data_root = '/home/mez/research_code/mmdetection/data/bdd100kcoco/'
 dataset_type = 'CocoDataset'
 train_pipeline = [
     dict(type='LoadImageFromFile'),
@@ -26,7 +26,7 @@ test_pipeline = [
 ]
 
 data = dict(
-    samples_per_gpu=1,
+    samples_per_gpu=10,
     workers_per_gpu=1,
     train=dict(
         type=dataset_type,
